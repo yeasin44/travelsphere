@@ -1,0 +1,50 @@
+[
+  {
+    "service_id": "01",
+    "title": "Kalo Jam",
+    "img": "https://i.ibb.co/k8smysf/kalo-jam.jpg",
+    "price": "1200",
+    "rating": "4",
+    "description": "Kalo Jam is a sweet confectionary or dessert, originating in the Bangladesh subcontinent and a type of mithai popular in Bangladesh India, Pakistan, Nepal, the Maldives, and Bangladesh, as well as Myanmar. It is the national dessert of India"
+  },
+  {
+    "service_id": "02",
+    "title": "Pizza",
+    "img": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Homemade-Pizza_EXPS_HCA20_376_E07_09_2b.jpg",
+    "price": "1500",
+    "rating": "5",
+    "description": "Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta"
+  },
+  {
+    "service_id": "03",
+    "title": "Kacha Golla",
+    "img": "https://i.ibb.co/XXsFfhX/IMG-20210828-WA0012.jpg",
+    "price": "800",
+    "rating": "5",
+    "description": "Bengali Kacha Golla is one sweet that I cannot resist and thankfully it’s one of the few Indian sweets which is light and extremely easy to make too"
+  },
+  {
+    "service_id": "04",
+    "title": "Burger",
+    "img": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2005%2F06%2F22%2F429048911_6152425885001_6152427053001-vs.jpg",
+    "price": "900",
+    "rating": "5",
+    "description": "A hamburger, or simply burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced"
+  },
+  {
+    "service_id": "05",
+    "title": "chicken shawarma",
+    "img": "https://recipe30.com/wp-content/uploads/2022/07/Shawarma-848x477.jpg",
+    "price": "1800",
+    "rating": "5",
+    "description": "Shawarma is a popular Middle Eastern meal that is made from marinated meat, such as lamb, beef, and chicken. It is one of the world's most popular street foods, especially in Egypt, and is now a staple at most Middle Eastern restaurants. Shawarma is a mouth-watering meal that is sure to please food and meat lovers."
+  },
+  {
+    "service_id": "06",
+    "title": "Shingara",
+    "img": "https://i.ibb.co/vmL06D0/receta-samosas-vegetales-03.jpg",
+    "price": "1300",
+    "rating": "4",
+    "description": "singara is a fried or baked pastry with a savory filling, including ingredients such as spiced potatoes, onions, and peas. It may take different forms, including triangular, cone, or half-moon shapes, depending on the region."
+  }
+]

@@ -4,6 +4,7 @@ import Card from "../Card/Card";
 import { FaSearchLocation, FaMoneyBillWave, FaSmileBeam } from "react-icons/fa";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/travel-logo.png";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -19,13 +20,23 @@ const Home = () => {
         <div className="">
           <img src={banner} alt="" />
         </div>
-        <div>
-          <p className="absolute text-4xl text-white font-bold ml-96 top-1/2">
-            Begin <br /> your journey <br /> with us
+        {/* <div className="flex justify-center">
+          <p className="absolute text-6xl text-black font-bold   top-1/2">
+            Welcome to
           </p>
-        </div>
+          <div className="flex absolute">
+            <div>
+              <p className="text-2xl text-black font-bold mr-40 top-3/4">
+                Jahan's Kitchen
+              </p>
+            </div>
+            <div>
+              <img className="w-20  top-3/4" src={logo} alt="" />
+            </div>
+          </div>
+        </div> */}
       </div>
-      <div className="">
+      <div className="m-6">
         <div className="">
           <h2 className="text-center text-3xl font-bold mt-12 mb-12">
             Our Services
