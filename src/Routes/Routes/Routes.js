@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../../components/Home/Home";
 import MyReview from "../../components/MyReview/MyReview";
 import ServiceDetails from "../../components/Services/ServiceDetails/ServiceDetails";
-
 import Services from "../../components/Services/Services";
 import Main from "../../layouts/Main";
 import Login from "../../Login/Login";
@@ -23,10 +22,10 @@ export const routes = createBrowserRouter([
         element: <Services></Services>,
       },
       {
-        path: "/serviceDetails/:id",
+        path: "/services/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`services.json/serviceDetails/${params.id}`),
+          fetch(`http://localhost:5000/services/${params.id}`),
       },
       {
         path: "/login",

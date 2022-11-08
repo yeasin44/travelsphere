@@ -4,13 +4,12 @@ import Card from "../Card/Card";
 import { FaSearchLocation, FaMoneyBillWave, FaSmileBeam } from "react-icons/fa";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/travel-logo.png";
 
 const Home = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -39,7 +38,7 @@ const Home = () => {
       <div className="m-6">
         <div className="">
           <h2 className="text-center text-3xl font-bold mt-12 mb-12">
-            Our Services
+            My Services
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto">

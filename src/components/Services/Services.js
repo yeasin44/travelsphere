@@ -4,7 +4,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -20,7 +20,10 @@ const Services = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{service.title}</h2>
-                <p>Price: ${service.price}</p>
+                <p>
+                  Price: <span className="text-xl">৳</span>
+                  {service.price}
+                </p>
                 <div>
                   <p>
                     <span className="font-bold">Description:</span>{" "}
@@ -32,7 +35,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="card-actions justify-center">
-                  <Link>
+                  <Link to={`/services/${service._id}`}>
                     <button className="btn btn-primary">View details</button>
                   </Link>
                 </div>
