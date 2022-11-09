@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("http://localhost:5000/allServices")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -41,7 +41,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="card-actions justify-center">
-                  <Link to={`/services/${service._id}`}>
+                  <Link to={`/allServices/${service._id}`}>
                     <button className="btn btn-primary">View details</button>
                   </Link>
                 </div>

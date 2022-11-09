@@ -36,7 +36,7 @@ const Home = () => {
             <Card key={service._id} service={service}></Card>
           ))}
         </div>
-        <Link to="/services" className="flex justify-center">
+        <Link to="/allServices" className="flex justify-center">
           <button
             className="
           btn btn-primary mt-6 "

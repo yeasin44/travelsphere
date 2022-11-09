@@ -22,14 +22,14 @@ export const routes = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/services",
+        path: "/allServices",
         element: <Services></Services>,
       },
       {
-        path: "/services/:id",
+        path: "/allServices/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`http://localhost:5000/allServices/${params.id}`),
       },
       {
         path: "/login",
