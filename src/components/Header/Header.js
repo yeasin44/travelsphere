@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/" className="font-bold">
           Home
         </Link>
-        <Link to="/" className="font-bold">
+        <Link to="/blog " className="font-bold">
           Blog
         </Link>
       </li>
@@ -53,8 +53,10 @@ const Header = () => {
             </ul>
           </div>
           <Link to="/" className="flex normal-case">
-            <img className="w-16" src={logo} alt="" />
-            <span className="ml-2 text-2xl font-bold mt-4">Travelsphere</span>
+            <img className="w-8 lg:w-16" src={logo} alt="" />
+            <span className="ml-2 lg:text-2xl font-bold mt-1 lg:mt-4">
+              Travelsphere
+            </span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -78,14 +80,19 @@ const Header = () => {
                 tabIndex={0}
                 className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
               >
+                <p className="text-black tex-2xl  text-center">
+                  {user?.displayName}
+                </p>
+                <div className="border border-orange-500"></div>
+
                 <li>
-                  <Link to="/myReview" className="justify-between">
+                  <Link to="/myreview" className="justify-between">
                     My Review
                     {/* <span className="badge">New</span> */}
                   </Link>
                 </li>
                 <li>
-                  <Link>Add Service</Link>
+                  <Link to="/addservice">Add Service</Link>
                 </li>
                 <li>
                   <Link onClick={handleLogOut}>Logout</Link>
@@ -94,8 +101,10 @@ const Header = () => {
             </div>
           ) : (
             <>
-              <Link to="/register">Register</Link>
-              <Link to="/login" className="ml-6 mr-4">
+              <Link to="/register" className="text-sm lg:text-lg">
+                Register
+              </Link>
+              <Link to="/login" className="ml-6 mr-4 text-sm lg:text-lg">
                 Login
               </Link>
             </>

@@ -10,7 +10,10 @@ const Card = ({ service }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>Price: ${price}</p>
+        <p>
+          Price: <span className="text-xl">৳</span>
+          {price}
+        </p>
         <div>
           <p>
             <span className="font-bold">Description:</span>{" "}

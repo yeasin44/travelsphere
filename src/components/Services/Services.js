@@ -14,7 +14,7 @@ const Services = () => {
       <div className="mt-12 mb-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto ">
           {services?.map((service) => (
-            <div className="card w-76 bg-base-100 shadow-xl">
+            <div className="card w-76 bg-base-100 shadow-xl" key={service._id}>
               <figure className="img-figure">
                 <img src={service.img} alt="" />
               </figure>
