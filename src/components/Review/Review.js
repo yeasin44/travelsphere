@@ -73,7 +73,7 @@ const Review = () => {
               ></textarea>
 
               <input
-                className="btn py-1 px-3  rounded font-bold mt-3 block"
+                className="btn  px-3  rounded font-bold mt-3 block "
                 type="submit"
                 value="Add Review"
               />

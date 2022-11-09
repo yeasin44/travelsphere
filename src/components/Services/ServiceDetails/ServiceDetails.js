@@ -50,7 +50,7 @@ const ServiceDetails = () => {
           ))}
         </div>
       </div>
-      <div className="mt-12 max-w-screen-lg mx-auto">
+      <div className="mt-12 max-w-screen-lg mx-auto py-6">
         <Review></Review>
       </div>
     </div>

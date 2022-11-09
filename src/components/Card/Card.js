@@ -1,12 +1,18 @@
 import React from "react";
 import "./Card.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Card = ({ service }) => {
   const { img, title, price, description } = service;
   return (
     <div className="card w-76 bg-base-100 shadow-xl">
       <figure className="img-figure">
-        <img src={img} alt="" />
+        <PhotoProvider>
+          <PhotoView src={img}>
+            <img src={img} alt="" style={{ objectFit: "cover" }} />
+          </PhotoView>
+        </PhotoProvider>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
