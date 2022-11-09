@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className=" p-6 bg-lime-100 h-screen">
+    <div className=" p-6 bg-lime-100 lg:h-screen md:h-screen">
       <div className="max-w-screen-lg mx-auto">
         <h2 className="text-center text-3xl font-semibold">
           Question & Answer
@@ -62,6 +62,34 @@ const Blog = () => {
               the JavaScript Engine installed. Node. js, on the other hand, is
               an interpreter or execution environment for the JavaScript
               programming
+            </p>
+          </div>
+        </div>
+        <div
+          tabIndex={0}
+          className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-1"
+        >
+          <div className="collapse-title text-xl font-medium">
+            4. How does NodeJS handle multiple requests at the same time?
+          </div>
+          <div className="collapse-content">
+            <p>
+              <span className="font-semibold">Ans:</span> We know NodeJS
+              application is single-threaded. Say, if processing involves
+              request A that takes 10 seconds, it does not mean that a request
+              which comes after this request needs to wait 10 seconds to start
+              processing because NodeJS event loops are only single-threaded.
+              The entire NodeJS architecture is not single-threaded. How NodeJS
+              handle multiple client requests? NodeJS receives multiple client
+              requests and places them into EventQueue. NodeJS is built with the
+              concept of event-driven architecture. NodeJS has its own EventLoop
+              which is an infinite loop that receives requests and processes
+              them. EventLoop is the listener for the EventQueue. If NodeJS can
+              process the request without I/O blocking then the event loop would
+              itself process the request and sends the response back to the
+              client by itself. But, it is possible to process multiple requests
+              parallelly using the NodeJS cluster module or worker_threads
+              module.
             </p>
           </div>
         </div>
