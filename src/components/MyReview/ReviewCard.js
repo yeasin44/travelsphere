@@ -41,9 +41,6 @@ const ReviewCard = ({ review, handleDelete }) => {
             <input type="checkbox" id="my-modal-6" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
               <div className="modal-box">
-                <h3 className="font-bold text-lg">
-                  Congratulations random Internet user!
-                </h3>
                 <p className="py-4">{reviews}</p>
                 <div className="modal-action">
                   <label htmlFor="my-modal-6" className="badge badge-outline">
