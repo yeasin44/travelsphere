@@ -28,7 +28,7 @@ const Header = () => {
     <div className="bg-sky-100">
       <div className="navbar  h-24 max-w-screen-lg mx-auto">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown drop-shadow-lg">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,12 @@ const Header = () => {
                   <Link to="/addservice">Add Service</Link>
                 </li>
                 <li>
-                  <Link onClick={handleLogOut}>Logout</Link>
+                  <Link
+                    onClick={handleLogOut}
+                    className="hover:bg-red-500 hover:text-white"
+                  >
+                    Logout
+                  </Link>
                 </li>
               </ul>
             </div>

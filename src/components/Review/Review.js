@@ -43,7 +43,7 @@ const Review = () => {
   };
   return (
     <div>
-      <div>
+      <div className="p-6 border-2 border-orange-200 drop-shadow-md rounded">
         {user ? (
           <>
             <form onSubmit={handleReview}>
@@ -55,7 +55,7 @@ const Review = () => {
                   name="name"
                   type="name"
                   placeholder="Your Name"
-                  className="input input-bordered w-1/2 "
+                  className="input input-bordered  lg:w-4/5 "
                 />
               </div>
 
@@ -67,15 +67,16 @@ const Review = () => {
               </label>
               <textarea
                 name="reviews"
-                className="textarea textarea-bordered w-1/2"
+                className="textarea textarea-bordered w-full lg:w-4/5"
                 placeholder="Review"
                 required
               ></textarea>
 
               <input
-                className="btn  px-3  rounded font-bold mt-3 block "
+                className="  px-2 py-2 text-white bg-red-500 cursor-pointer  rounded font-bold mt-3 block "
                 type="submit"
                 value="Add Review"
+                style={{ fontSize: "10px" }}
               />
             </form>
           </>

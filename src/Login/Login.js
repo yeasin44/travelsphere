@@ -6,7 +6,7 @@ import useTitle from "../hooks/useTitle";
 import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
-  const { logIn } = useContext(AuthContext);
+  const { logIn, setLoading } = useContext(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -30,19 +30,23 @@ const Login = () => {
           toast.error(error);
         }
         navigate(from, { replace: true });
+        form.reset();
       })
       .catch((error) => {
         console.error(error);
         setError(error.message);
         toast.error(error.message.slice(22, -2));
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 ">
       <div className="hero-content">
         <div className="card shadow-2xl bg-base-100">
           <form onSubmit={handleLogIn} className="card-body">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-4xl font-bold">Login now!</h1>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -67,9 +71,9 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <Link className="label-text-alt link link-hover">
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             <div className="form-control mt-6">
@@ -77,12 +81,15 @@ const Login = () => {
             </div>
             <div>
               <p className="text-sm text-center">
-                New to Travelsphere? <Link to="/register">Register</Link>
+                New to Travelsphere?{" "}
+                <Link to="/register" className="text-red-500 font-semibold">
+                  Register
+                </Link>
               </p>
             </div>
-            <div>
-              <div className="border border-current mt-6"></div>
-              <div className=" flex justify-center mt-6">
+            <div className="">
+              <div className="border border-current mt-4"></div>
+              <div className=" flex justify-center mt-6 border p-3 bg-slate-800 rounded border-red-400">
                 <SocialLogin></SocialLogin>
               </div>
             </div>

@@ -28,10 +28,10 @@ const SocialLogin = () => {
   };
   return (
     <div>
-      <button onClick={handleGoogleLogin} className="text-xl">
+      <button onClick={handleGoogleLogin} className="text-xl text-white">
         <FaGoogle></FaGoogle>
       </button>
-      <button className="text-xl ml-4">
+      <button className="text-xl ml-4 text-white">
         <FaGithub></FaGithub>
       </button>
     </div>
