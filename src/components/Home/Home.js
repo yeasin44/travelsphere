@@ -5,6 +5,7 @@ import { FaSearchLocation, FaMoneyBillWave, FaSmileBeam } from "react-icons/fa";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
+import Clients from "../Clients/Clients";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -89,6 +90,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Clients></Clients>
       </div>
     </div>
   );

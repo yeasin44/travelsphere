@@ -11,7 +11,7 @@ const Footer = () => {
           <p>
             Travelsphere
             <br />
-            Providing safe journey from 2010
+            Providing safe guide from 2010
           </p>
         </div>
         <div>

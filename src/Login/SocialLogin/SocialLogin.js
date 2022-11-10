@@ -1,14 +1,13 @@
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const SocialLogin = () => {
-  const { socialLogin } = useContext(AuthContext);
+  const { socialLogin, setLoading } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,15 +23,16 @@ const SocialLogin = () => {
       })
       .catch((error) => {
         console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
+
   return (
     <div>
       <button onClick={handleGoogleLogin} className="text-xl text-white">
         <FaGoogle></FaGoogle>
-      </button>
-      <button className="text-xl ml-4 text-white">
-        <FaGithub></FaGithub>
       </button>
     </div>
   );
