@@ -4,12 +4,14 @@ import Card from "../Card/Card";
 import { FaSearchLocation, FaMoneyBillWave, FaSmileBeam } from "react-icons/fa";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const Home = () => {
   const [services, setServices] = useState([]);
+  useTitle("Home");
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://assignment-11-server-three.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -45,14 +47,14 @@ const Home = () => {
           </button>
         </Link>
       </div>
-      <div className="mb-20">
-        <h2 className="text-center text-3xl font-bold mt-20 mb-2">
+      <div className="py-12">
+        <h2 className="text-center text-xl lg:text-3xl font-bold mt-6 mb-2">
           Why Choose Travelsphere
         </h2>
         <p className="text-center font-semibold mb-12">
           I offer most competitive rates and safe guide.
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-lg mx-auto p-6">
           <div className="card w-76 bg-base-100 shadow-xl">
             <div className="card-body">
               <FaSearchLocation className="w-20 h-20 mx-auto"></FaSearchLocation>

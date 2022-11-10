@@ -1,14 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
+
 import ReviewCard from "./ReviewCard";
 
 const MyReview = () => {
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
+  useTitle("My review");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+    fetch(
+      `https://assignment-11-server-three.vercel.app/reviews?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [user?.email]);
@@ -18,7 +23,7 @@ const MyReview = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure you want to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://assignment-11-server-three.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

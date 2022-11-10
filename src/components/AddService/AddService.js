@@ -1,9 +1,11 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const AddService = () => {
   const { _id } = useLoaderData();
+  useTitle("Add service");
   const handleAddService = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -19,7 +21,7 @@ const AddService = () => {
       description,
     };
     // console.log(img, title, price, description);
-    fetch("http://localhost:5000/addService", {
+    fetch("https://assignment-11-server-three.vercel.app/addService", {
       method: "POST",
       headers: {
         "content-type": "application/json",

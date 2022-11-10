@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider/AuthProvider";
+import useTitle from "../hooks/useTitle";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
+  useTitle("Register");
 
   const handleCreateUser = (event) => {
     event.preventDefault();

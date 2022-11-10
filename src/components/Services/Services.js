@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import useTitle from "../../hooks/useTitle";
 const Services = () => {
   const [services, setServices] = useState([]);
+  useTitle("All services");
 
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
+    fetch("https://assignment-11-server-three.vercel.app/allServices")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

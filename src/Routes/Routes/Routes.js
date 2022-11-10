@@ -30,7 +30,9 @@ export const routes = createBrowserRouter([
         path: "/allServices/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allServices/${params.id}`),
+          fetch(
+            `https://assignment-11-server-three.vercel.app/allServices/${params.id}`
+          ),
       },
       {
         path: "/login",
@@ -56,7 +58,9 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(
+            `https://assignment-11-server-three.vercel.app/services/${params.id}`
+          ),
       },
       {
         path: "/addService",
@@ -65,7 +69,8 @@ export const routes = createBrowserRouter([
             <AddService></AddService>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/addService"),
+        loader: () =>
+          fetch("https://assignment-11-server-three.vercel.app/addService"),
       },
       {
         path: "/blog",
