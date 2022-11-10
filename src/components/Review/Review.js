@@ -63,7 +63,7 @@ const Review = () => {
                 htmlFor="name"
                 className="text-lg mt-4 font-bold block m-2"
               >
-                Review content:{" "}
+                Review:{" "}
               </label>
               <textarea
                 name="reviews"
@@ -73,10 +73,10 @@ const Review = () => {
               ></textarea>
 
               <input
-                className="  px-2 py-2 text-white bg-red-500 cursor-pointer  rounded font-bold mt-3 block "
+                className=" ml-2 px-2 py-2 text-white bg-red-500 cursor-pointer  rounded font-semibold mt-3 block "
                 type="submit"
                 value="Add Review"
-                style={{ fontSize: "10px" }}
+                style={{ fontSize: "12px" }}
               />
             </form>
           </>

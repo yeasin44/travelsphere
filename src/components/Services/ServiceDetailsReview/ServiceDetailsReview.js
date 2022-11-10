@@ -7,7 +7,7 @@ const ServiceDetailsReview = ({ review }) => {
 
   const { serviceName, name, reviews } = review;
   return (
-    <div>
+    <div className="">
       <div className="card w-50 bg-base-100 shadow-xl">
         <div className="flex gap-4">
           <div className="avatar ml-8 mt-6">

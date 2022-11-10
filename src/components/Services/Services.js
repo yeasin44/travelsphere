@@ -44,7 +44,9 @@ const Services = () => {
                 </div>
                 <div className="card-actions justify-center">
                   <Link to={`/allServices/${service._id}`}>
-                    <button className="btn btn-primary">View details</button>
+                    <button className="px-2 py-2 text-white bg-sky-500 cursor-pointer  rounded  font-bold">
+                      View details
+                    </button>
                   </Link>
                 </div>
               </div>

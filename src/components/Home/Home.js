@@ -42,7 +42,7 @@ const Home = () => {
         <Link to="/allServices" className="flex justify-center">
           <button
             className="
-          btn btn-primary mt-6 "
+          btn btn-primary mt-6 text-white font-bold"
           >
             See all
           </button>

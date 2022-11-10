@@ -4,12 +4,12 @@ import useTitle from "../../hooks/useTitle";
 const Blog = () => {
   useTitle("Blog");
   return (
-    <div className=" p-2 bg-lime-100 lg:h-screen md:h-screen">
+    <div className=" p-2 bg-slate-800 lg:h-screen md:h-screen">
       <div className="max-w-screen-lg mx-auto">
-        <h2 className="text-center text-3xl font-semibold  py-6">
+        <h2 className="text-center text-white first-line: text-3xl font-semibold  py-6">
           Question & Answer
         </h2>
-        <div className="border border-slate-700 mx-auto w-4/5"></div>
+        <div className="border border-white mx-auto w-4/5"></div>
         <div
           tabIndex={0}
           className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box mt-4"
